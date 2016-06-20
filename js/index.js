@@ -366,7 +366,7 @@ function drawRoute(data, polyline, map) {
     var rr = countDistanceByPolyline(polyline.slice(bgn, end + 1));
     // console.log(rr);
     quality[i.eval] += rr;
-    var line = new ymaps.Polyline(polyline.slice(bgn, end + 1), { 
+    var line = new ymaps.Polyline(polyline.slice(bgn, end + 1), {
             // Описываем свойства геообъекта.
             // Содержимое балуна.
             balloonContent: "<b>" + ROUTE[i.eval].hint + "</b>" + "<br/>От Чекшино: " + i.bgn + " км" + "<br/>Протяжённость: " + Math.ceil(rr / 1000) + " км",
@@ -377,7 +377,7 @@ function drawRoute(data, polyline, map) {
             // Цвет линии.
             strokeColor: ROUTE[i.eval].color,
             // Ширина линии.
-            strokeWidth: 4,
+            strokeWidth: 6,
             // Коэффициент прозрачности.
             strokeOpacity: 0.75
         });
